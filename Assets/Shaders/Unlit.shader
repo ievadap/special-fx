@@ -6,7 +6,6 @@
     }
     SubShader
     {
-
         Pass
         {
             CGPROGRAM

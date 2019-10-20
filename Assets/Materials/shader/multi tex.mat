@@ -20,11 +20,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BTexture:
-        m_Texture: {fileID: 2800000, guid: 79bc4af5afca34cc382feb1f5ded8a44, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BlendTex:
-        m_Texture: {fileID: 2800000, guid: c44b6e9512944486cb90f3ff7a342e39, type: 3}
+        m_Texture: {fileID: 28982428379543962, guid: 2f22478f85d7c4e0a89f483fc4d9f7b6,
+          type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -68,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RTexture:
-        m_Texture: {fileID: 2800000, guid: 5b303ff28ad9368468a2edd759cf458d, type: 3}
+        m_Texture: {fileID: 2800000, guid: c3d66a8056f9db345b1ea380aa7e815d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -93,4 +94,4 @@ Material:
     - _ColorA: {r: 1, g: 1, b: 1, a: 1}
     - _ColorB: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainTint: {r: 1, g: 1, b: 1, a: 1}
+    - _MainTint: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
