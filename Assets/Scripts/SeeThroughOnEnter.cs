@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SeeThroughOnEnter : MonoBehaviour
 {
-    private bool isTriggered = false;
     private new Renderer renderer;
     private void Start() 
     {
@@ -13,24 +12,23 @@ public class SeeThroughOnEnter : MonoBehaviour
     }
     private void Update() 
     {
-        animateTransparency();
+        animateEmissionIntensity();
     }
-    private void animateTransparency()
+    private void animateEmissionIntensity()
     {
-        if (isTriggered) return;
-        float alpha = Mathf.PingPong(Time.time, 1.0f);
-        renderer.material.SetColor("_Color", colorWithAlpha(alpha)); 
+        float emission = Mathf.PingPong(Time.time, 2.0f) + 0.5f;
+        Color baseColor = renderer.material.color; 
+        Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
+        renderer.material.SetColor("_EmissionColor", finalColor); 
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.name != "Player") return;
-        isTriggered = true;
         renderer.material.SetColor("_Color", colorWithAlpha(0));
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.name != "Player") return;
-        isTriggered = false;
         renderer.material.SetColor("_Color", colorWithAlpha(1));
     }
     private Color colorWithAlpha(float alpha) 
