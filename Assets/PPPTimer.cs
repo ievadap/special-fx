@@ -9,6 +9,6 @@ public class PPPTimer : MonoBehaviour
     private void Update() {
         PostProcessVolume volume = gameObject.GetComponent<PostProcessVolume>();
         volume.profile.TryGetSettings(out bloomLayer);
-        bloomLayer.intensity.value = Mathf.PingPong(Time.time, 1) * 25;
+        bloomLayer.intensity.value = Mathf.PingPong(Time.time, 1) * 20;
     }
 }
